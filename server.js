@@ -2,13 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
+const testConnection = require('./config/db');
 const authRoutes = require('./routers/auth');
 const profileRoutes = require('./routers/profile');
 
 const app = express();
 
 // Connect to MongoDB
-connectDB();
+// connectDB();
+testConnection();
 
 // Middleware
 app.use(express.json());
