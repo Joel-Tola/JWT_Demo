@@ -8,8 +8,8 @@ const profileRoutes = require('./routers/profile');
 const app = express();
 
 // Connect to MongoDB
-// connectDB();
-testConnection();
+connectDB();
+//testConnection();
 
 // Middleware
 app.use(express.json());

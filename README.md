@@ -76,6 +76,11 @@ A secure authentication API built with Node.js, Express, MongoDB, and JSON Web T
 3. **Refreshing Tokens**: Under the hood, when the `accessToken` expires, the client calls the `/refresh` endpoint, which reads the `refresh_token` cookie. The server validates the token against the database, revokes the old token, issues a new `accessToken` and a new `refreshToken` (rotation), and saves the new refresh token to the database.
 4. **Logout**: Calling `/logout` flags the user's active refresh token as revoked in the database and clears the HTTP-only cookie from the client.
 
+## Acknowledgments
+
+This project is based on the excellent tutorial from freeCodeCamp:
+- [How to Build a Secure Authentication System with JWT and Refresh Tokens](https://www.freecodecamp.org/news/how-to-build-a-secure-authentication-system-with-jwt-and-refresh-tokens)
+
 ## License
 
 This project is licensed under the ISC License.
