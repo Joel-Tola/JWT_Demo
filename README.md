@@ -88,6 +88,7 @@ Before running the app locally, start the SSH tunnel in **Windows PowerShell**:
 
 ```powershell
 ssh -N -L 27017:127.0.0.1:27017 root@YOUR_VPS_IP
+```
 
 ## Acknowledgments
 
