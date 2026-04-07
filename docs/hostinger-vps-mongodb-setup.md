@@ -77,7 +77,7 @@ So the local app connects to:
 
 ---
 
-# Why Option A is Recommended
+# Why This Option is Recommended
 
 ## Advantages
 
@@ -232,7 +232,7 @@ net:
 For this secure setup:
 
 - ✅ `127.0.0.1` = correct
-- ❌ `0.0.0.0` = wrong for Option A
+- ❌ `0.0.0.0` = wrong for this approach
 
 Restart after changes:
 
@@ -476,6 +476,36 @@ Meaning:
 - local PC opens port `27017`
 - forwards through SSH
 - VPS connects to its own `127.0.0.1:27017`
+
+---
+
+# How to test if the tunnel works
+
+After starting the tunnel, on your local machine:
+
+### Test with Mongo shell
+
+```bash
+mongosh mongodb://127.0.0.1:27017
+```
+
+or
+
+```bash
+mongosh mongodb://localhost:27017
+```
+
+### Test with a simple port check (Linux/macOS/Git Bash)
+
+```bash
+nc -vz 127.0.0.1 27017
+```
+
+### On Windows PowerShell
+
+```powershell
+Test-NetConnection 127.0.0.1 -Port 27017
+```
 
 ---
 
