@@ -18,6 +18,7 @@ This document explains how this project connects to a **MongoDB instance running
 - [Enable Authentication](#enable-authentication)
 - [VPS Verification Tests](#vps-verification-tests)
 - [Windows PowerShell SSH Tunnel Commands](#windows-powershell-ssh-tunnel-commands)
+- [How to test if the tunnel works](#how-to-test-if-the-tunnel-works)
 - [Local Connection String](#local-connection-string)
 - [Node.js Test Script](#nodejs-test-script)
 - [Mongoose Test Script](#mongoose-test-script)
